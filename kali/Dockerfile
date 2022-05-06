@@ -1,6 +1,7 @@
 FROM kalilinux/kali-rolling:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_CTYPE=C.UTF-8
 
 RUN apt update
 RUN apt -y upgrade
