@@ -1,8 +1,11 @@
 FROM alpine:latest
 
+# Update
 RUN apk --no-cache update
 RUN apk --no-cache upgrade
 
-RUN apk add --no-cache bash nano neovim vim
+# Install additional tools
+RUN apk add --no-cache bash
+RUN apk add --no-cache vim neovim nano
 
 CMD ["bash"]
