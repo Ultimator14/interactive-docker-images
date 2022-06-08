@@ -2,10 +2,10 @@
 
 ## Available Images
 
-- [Alpine](https://hub.docker.com/repository/docker/ultimator14/alpine-interactive)
-- [Arch](https://hub.docker.com/repository/docker/ultimator14/arch-interactive)
-- [Kali](https://hub.docker.com/repository/docker/ultimator14/kali-interactive)
-- [Ubuntu](https://hub.docker.com/repository/docker/ultimator14/ubuntu-interactive)
+- [Alpine](https://hub.docker.com/r/ultimator14/alpine-interactive)
+- [Arch](https://hub.docker.com/r/ultimator14/arch-interactive)
+- [Kali](https://hub.docker.com/r/ultimator14/kali-interactive)
+- [Ubuntu](https://hub.docker.com/r/ultimator14/ubuntu-interactive)
 
 ## Run the images
 
