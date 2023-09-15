@@ -11,7 +11,7 @@ RUN pacman -S --noconfirm net-tools
 RUN pacman -S --noconfirm which
 
 # Install non-apt packages gef and pwntools
-RUN pip install --user pwntools
+RUN pip install --break-system-packages --user pwntools
 RUN bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
 
 CMD ["bash"]
