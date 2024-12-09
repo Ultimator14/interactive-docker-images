@@ -10,9 +10,10 @@ RUN apt -y upgrade
 RUN apt install -yq kali-linux-headless
 
 # Install additional tools
-RUN apt install -yq vim neovim nano
-RUN apt install -yq gdb gdbserver patchelf
-RUN apt install -yq iputils-ping
+RUN apt install -yq \
+	vim neovim nano \
+	gdb gdbserver patchelf \
+	iputils-ping
 
 # Install non-apt packages gef and pwntools
 RUN pip install --user pwntools

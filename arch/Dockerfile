@@ -4,13 +4,14 @@ FROM archlinux:latest
 RUN pacman -Syyu --noconfirm
 
 # Install additional tools
-RUN pacman -S --noconfirm vim neovim nano
-RUN pacman -S --noconfirm python python-pip
-RUN pacman -S --noconfirm binutils gcc gdb lib32-glibc patchelf
-RUN pacman -S --noconfirm net-tools
-RUN pacman -S --noconfirm which
+RUN pacman -S --noconfirm \
+	vim neovim nano \
+	python python-pip \
+	binutils gcc gdb lib32-glibc patchelf \
+	net-tools \
+	which
 
-# Install non-apt packages gef and pwntools
+# Install non-pacman packages gef and pwntools
 RUN pip install --break-system-packages --user pwntools
 RUN bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
 
