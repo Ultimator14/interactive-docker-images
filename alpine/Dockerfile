@@ -38,6 +38,11 @@ RUN nvim --headless "+Lazy load all" "+TSUpdateSync" "+qa"
 RUN nvim --headless "+Lazy load all" "+MasonInstall debugpy" "+MasonInstall lua-language-server" "+qa"
 RUN nvim --headless "+Lazy load all" "+TSUpdateSync" "+qa"
 
+# Initial start (tmux)
+RUN tmux new-session -d -s "pluginst" && \
+	tmux send-keys -t "pluginst" "tmux run-shell '~/.local/share/tmux/plugins/tpm/scripts/install_plugins.sh'; tmux wait -S sigfinished; exit" C-m && \
+	tmux wait sigfinished
+
 # Refresh package database
 RUN apk update
 
