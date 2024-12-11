@@ -2,6 +2,7 @@ FROM ubuntu:latest
 
 # Set envs
 ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_CTYPE=C.UTF-8
 ENV SHELL="/bin/bash"
 
 # Update

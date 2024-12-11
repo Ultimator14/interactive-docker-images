@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 # Set envs
+ENV LC_CTYPE=C.UTF-8
 ENV SHELL="/bin/bash"
 
 # Update
